@@ -13,7 +13,7 @@ public class MainGame extends Application {
         PreLude gameScreen = new PreLude(primaryStage);
 
         // Set the title screen as the initial scene
-        primaryStage.setTitle("NightShift at Seven Guys");
+        primaryStage.setTitle("NightShift at Seven Guys (UNFINISHED VERSION)");
         primaryStage.setScene(titleScreen.getScene());
         primaryStage.show();
     }
