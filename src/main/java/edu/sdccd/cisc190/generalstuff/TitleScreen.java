@@ -11,7 +11,8 @@ public class TitleScreen {
 
     public TitleScreen(Stage primaryStage) {
         // Create the title text
-        Text titleText = new Text("The NightShift at SevenGuys");
+        Text titleText = new Text("The NightShift at SevenGuys\n" +
+                "Isn't entirely perfect, but... it works!!!");
         titleText.setStyle("-fx-font-size: 30px; -fx-font-weight: bold;");
 
         // Create the start button
