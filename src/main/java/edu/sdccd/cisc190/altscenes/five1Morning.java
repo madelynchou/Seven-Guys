@@ -26,13 +26,14 @@ public class five1Morning {
         // Text for displaying stats (conviction and madness)
         statsText = new Text("Conviction: " + conviction + " | Madness: " + madness);
         statsText.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
-        // Button actions
+        // TODO: Create button for the first action
         Button oneButton = new Button("Attack with a water bottle (50% remaining)");
         conviction++;
         oneButton.setStyle("-fx-font-size: 14px;");
         oneButton.setOnAction(e -> gameStatus.setText(""));
         oneButton.setOnAction(e -> primaryStage.setScene(new fiveAttackWater(primaryStage).getScene()));
 
+        // TODO: Create button for second action
         Button twoButton = new Button("Dodge attack");
         madness++;
         twoButton.setStyle("-fx-font-size: 14px;");
