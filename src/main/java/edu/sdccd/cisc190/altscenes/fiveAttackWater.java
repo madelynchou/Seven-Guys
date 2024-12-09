@@ -37,6 +37,7 @@ public class fiveAttackWater {
         gameStatus.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
 
         // Text for displaying stats (conviction and madness)
+        // TODO: Initialize conviction and madness variables to avoid using uninitialized values.
         statsText = new Text("Conviction: " + conviction + " | Madness: " + madness);
         statsText.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
 
@@ -50,6 +51,7 @@ public class fiveAttackWater {
         sixButton = new Button("Continue");
         sevenButton = new Button("Endings");
         continueButton = new Button("Transition to 6 AM");
+        // TODO: Decide if you want to initialize these buttons hidden or visible.
 
         // Set initial visibility of some buttons
         threeButton.setVisible(false);
@@ -61,6 +63,7 @@ public class fiveAttackWater {
 
         // Button actions
         oneButton.setOnAction(e -> {
+            // TODO: Add explanation for why game status changes after this action.
             // Update game status text for the twoButton scenario
             updateStats();  // Update the stats text
 
@@ -68,7 +71,9 @@ public class fiveAttackWater {
 
             // Hide the other buttons to focus on choices
             sixButton.setVisible(true);
+            // TODO: Make sure this action makes sense in the game flow.
             hideOtherButtons();
+            // TODO: Consider if other buttons should also be hidden.
         });
 
         twoButton.setOnAction(e -> {
@@ -89,6 +94,7 @@ public class fiveAttackWater {
 
         // Action for the threeButton
         threeButton.setOnAction(e -> {
+            // TODO: Add explanation for this scenario, like why this action leads to success.
             gameStatus.setText("You successfully dodged Daniel the Dog’s attack. But Ozzy the Ostrich caught up to you.");
             updateStats();  // Update the stats text
 
@@ -99,6 +105,7 @@ public class fiveAttackWater {
 
         // Action for the fourButton
         fourButton.setOnAction(e -> {
+            // TODO: Add a description for what happens here and why the game status changes.
             gameStatus.setText("You were attacked…");
             updateStats();  // Update the stats text
 
@@ -109,6 +116,7 @@ public class fiveAttackWater {
 
         // Action for the fiveButton
         fiveButton.setOnAction(e -> {
+            // TODO: Provide details for this event and why it's happening.
             gameStatus.setText("You successfully dodged Daniel the Dog’s attack and narrowly avoided Ozzy the Ostrich, as he’s catching up to you.\n" +
                     "Both Daniel the Dog and Ozzy the Ostrich are chasing after you, and you realize that the office would leave you trapped.\n" +
                     "So the best effort is to go to the kitchen and go to the alternative exit.\n" +
