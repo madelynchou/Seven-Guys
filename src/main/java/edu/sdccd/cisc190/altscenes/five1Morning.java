@@ -24,17 +24,22 @@ public class five1Morning {
         gameStatus.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
 
         // Text for displaying stats (conviction and madness)
+        // TODO: Initialize conviction and madness to some default value instead of using uninitialized values.
         statsText = new Text("Conviction: " + conviction + " | Madness: " + madness);
         statsText.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
         // Button actions
         Button oneButton = new Button("Attack with a water bottle (50% remaining)");
         conviction++;
+        // TODO: Add explanation for why conviction is increased when this button is pressed.
         oneButton.setStyle("-fx-font-size: 14px;");
         oneButton.setOnAction(e -> gameStatus.setText(""));
+        // TODO: Add functionality to change game status when button is clicked.
         oneButton.setOnAction(e -> primaryStage.setScene(new fiveAttackWater(primaryStage).getScene()));
+        // TODO: Check why there are two setOnAction calls for one button.
 
         Button twoButton = new Button("Dodge attack");
         madness++;
+        // TODO: Add explanation for why madness is increased when this button is pressed.
         twoButton.setStyle("-fx-font-size: 14px;");
         twoButton.setOnAction(e -> primaryStage.setScene(new fiveDodge(primaryStage).getScene()));
 
@@ -59,6 +64,7 @@ public class five1Morning {
     }
 
     // Method to update the stats text
+    // TODO: Update this method to handle the stats correctly if they change during the game.
     private void updateStats() {
         statsText.setText("Conviction: " + conviction + " | Madness: " + madness);
     }
